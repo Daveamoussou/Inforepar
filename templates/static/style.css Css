@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  color: #222;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #0d1b2a;
+  color: white;
+}
+
+.logo span { color: #4dabf7; }
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.hero {
+  background: #1b263b;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #4dabf7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 { margin-bottom: 30px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #f1f3f5;
+  padding: 25px;
+  border-radius: 8px;
+  width: 220px;
+}
+
+.contact {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  padding: 12px;
+  background: #0d1b2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d1b2a;
+  color: white;
+}
