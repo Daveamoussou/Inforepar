@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InfoRépar - Maintenance Informatique</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+  <header>
+    <div class="logo">Info<span>Répar</span></div>
+    <nav>
+      <ul>
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="accueil" class="hero">
+    <h1>Votre expert en maintenance informatique</h1>
+    <p>Réparation, dépannage et entretien de vos ordinateurs, à domicile ou en atelier.</p>
+    <a href="#contact" class="btn">Demander un devis</a>
+  </section>
+
+  <section id="services" class="services">
+    <h2>Nos services</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>🔧 Réparation</h3>
+        <p>Diagnostic et réparation de pannes matérielles et logicielles.</p>
+      </div>
+      <div class="card">
+        <h3>🦠 Suppression virus</h3>
+        <p>Nettoyage complet et sécurisation de votre système.</p>
+      </div>
+      <div class="card">
+        <h3>💾 Sauvegarde de données</h3>
+        <p>Récupération et sauvegarde de vos fichiers importants.</p>
+      </div>
+      <div class="card">
+        <h3>⚙️ Installation & configuration</h3>
+        <p>Mise en place de logiciels, réseaux et périphériques.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contactez-nous</h2>
+    <form id="contact-form">
+      <input type="text" id="nom" placeholder="Votre nom" required>
+      <input type="email" id="email" placeholder="Votre email" required>
+      <textarea id="message" placeholder="Décrivez votre problème" required></textarea>
+      <button type="submit">Envoyer</button>
+    </form>
+    <p id="confirmation" class="hidden"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 InfoRépar - Tous droits réservés</p>
+  </footer>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+  </html>
