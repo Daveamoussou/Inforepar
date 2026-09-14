@@ -1,34 +1,112 @@
-document.getElementById("contact-form").addEventListener("submit", async function (e) {
-  e.preventDefault();
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
 
-  const nom = document.getElementById("nom").value;
-  const email = document.getElementById("email").value;
-  const message = document.getElementById("message").value;
+body {
+  color: #222;
+  line-height: 1.6;
+}
 
-  const confirmation = document.getElementById("confirmation");
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: #0d1b2a;
+  color: white;
+}
 
-  try {
-    const reponse = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nom, email, message }),
-    });
+.logo span { color: #4dabf7; }
 
-    const resultat = await reponse.json();
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
 
-    if (resultat.succes) {
-      confirmation.textContent = "Merci ! Votre message a bien été envoyé.";
-      confirmation.style.color = "green";
-      this.reset();
-    } else {
-      confirmation.textContent = "Erreur : " + resultat.erreur;
-      confirmation.style.color = "red";
-    }
-  } catch (erreur) {
-    confirmation.textContent = "Impossible de contacter le serveur.";
-    confirmation.style.color = "red";
-    console.error(erreur);
-  }
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
-  confirmation.classList.remove("hidden");
-});
+.hero {
+  background: #1b263b;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 { font-size: 2.2rem; margin-bottom: 15px; }
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #4dabf7;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services h2 { margin-bottom: 30px; }
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background: #f1f3f5;
+  padding: 25px;
+  border-radius: 8px;
+  width: 220px;
+}
+
+.contact {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+#contact-form button {
+  padding: 12px;
+  background: #0d1b2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hidden { display: none; }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #0d1b2a;
+  color: white;
+}
